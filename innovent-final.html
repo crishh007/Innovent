@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+<!-- ══ SEO ══ -->
+<title>Innovent Global Technologies — Premium Product Studio | Remote-First</title>
+<meta name="description" content="Innovent Global Technologies is a premium global product studio. 142+ products shipped, 98% client satisfaction, 22 countries. We build fast, elegant software that scales."/>
+<meta name="keywords" content="product studio, software development, remote engineering, React, Next.js, TypeScript, global tech team, Chaitanya"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://innoventglobal.tech/"/>
+<meta name="author" content="Innovent Global Technologies"/>
+
+<!-- ══ OG / SOCIAL ══ -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://innoventglobal.tech/"/>
+<meta property="og:title" content="Innovent Global Technologies — Build the Future"/>
+<meta property="og:description" content="Premium product studio. 142+ products, 98% satisfaction, 22 countries. We turn ambitious ideas into software that scales."/>
+<meta property="og:image" content="https://innoventglobal.tech/og-image.png"/>
+<meta property="og:site_name" content="Innovent Global Technologies"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Innovent Global Technologies"/>
+<meta name="twitter:description" content="Premium product studio. Ship fast. Ship with purpose."/>
+
+<!-- ══ SCHEMA.ORG ══ -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Innovent Global Technologies","url":"https://innoventglobal.tech","description":"Premium global product studio","founder":{"@type":"Person","name":"Chaitanya"},"numberOfEmployees":{"@type":"QuantitativeValue","minValue":50},"knowsAbout":["Software Development","Product Design","DevOps","AI/ML"]}</script>
+
+<!-- ══ PERF HINTS ══ -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@500;600;700&family=Cabinet+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+
+<style>
+/* ══════════════════════════════════════
+   TOKENS
+══════════════════════════════════════ */
+:root{
+  --ink:#07070e;--v:#7c5cfc;--v2:#a78bfa;--v3:#4f3db7;
+  --c:#00d4ff;--g:#00f5a0;--warm:#ff6b6b;
+  --text:#eeeeff;--muted:#8b8aaa;
+  --border:rgba(124,92,252,.16);--glass:rgba(255,255,255,.035);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+
+/* ══ REDUCE MOTION ══ */
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  #bg-canvas{display:none}
+  .fi,.fi-l,.tl-item{opacity:1;transform:none}
+}
+
+body{
+  background:var(--ink);color:var(--text);
+  font-family:'Cabinet Grotesk',sans-serif;
+  overflow-x:hidden;cursor:none;
+  font-size:16px;line-height:1.6;
+}
+@media(max-width:768px){body{cursor:auto}}
+
+/* ══ SKIP LINK (a11y) ══ */
+.skip-link{position:fixed;top:-100%;left:16px;z-index:10000;background:var(--v);color:#fff;
+  padding:10px 20px;border-radius:8px;font-weight:700;text-decoration:none;transition:top.2s}
+.skip-link:focus{top:16px}
+
+/* ══ CURSOR ══ */
+#cur,#cur2{position:fixed;border-radius:50%;pointer-events:none;z-index:9999;
+  transform:translate(-50%,-50%);transition:background.3s,width.2s,height.2s;will-change:left,top}
+#cur{width:10px;height:10px;background:var(--v2);mix-blend-mode:difference}
+#cur2{width:34px;height:34px;border:1.5px solid rgba(167,139,250,.4);transition:all.14s ease}
+@media(max-width:768px){#cur,#cur2{display:none}}
+
+/* ══ CANVAS ══ */
+#bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
+#noise{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.025;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:180px}
+
+/* ══ PROGRESS ══ */
+#progress{position:fixed;top:0;left:0;height:2px;width:100%;z-index:300;transform-origin:left;
+  background:linear-gradient(90deg,var(--v),var(--c),var(--g));transform:scaleX(0);will-change:transform}
+
+/* ══ NAV ══ */
+nav{position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-content:space-between;
+  padding:16px 60px;border-bottom:1px solid transparent;transition:all.35s}
+nav.sc{background:rgba(7,7,14,.92);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border-bottom-color:var(--border)}
+.logo-wrap{display:flex;flex-direction:column;gap:1px}
+.logo{font-family:'Clash Display',sans-serif;font-size:20px;font-weight:700;letter-spacing:-.3px;
+  background:linear-gradient(120deg,#fff 0%,var(--v2) 55%,var(--c) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-sub{font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:600;letter-spacing:2.5px;
+  text-transform:uppercase;color:rgba(167,139,250,.45)}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;
+  transition:color.2s;position:relative;padding:4px 0}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:1px;
+  background:var(--v2);transform:scaleX(0);transform-origin:left;transition:transform.3s}
+.nav-links a:hover{color:#fff}.nav-links a:hover::after{transform:scaleX(1)}
+.nav-links a:focus-visible{outline:2px solid var(--v2);outline-offset:4px;border-radius:4px}
+.nav-btn{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:1px;
+  text-transform:uppercase;padding:10px 22px;border-radius:8px;border:1px solid rgba(124,92,252,.4);
+  background:rgba(124,92,252,.1);color:var(--v2);cursor:pointer;transition:all.3s}
+.nav-btn:hover{background:var(--v);border-color:var(--v);color:#fff;box-shadow:0 0 32px rgba(124,92,252,.45)}
+.nav-btn:focus-visible{outline:2px solid var(--v2);outline-offset:4px}
+
+/* ══ HERO ══ */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:0 32px;position:relative;z-index:10}
+.hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:2px;
+  color:var(--v2);text-transform:uppercase;margin-bottom:28px;display:flex;align-items:center;gap:12px;
+  justify-content:center;opacity:0;animation:fadeUp .7s .2s forwards}
+.eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--g);
+  box-shadow:0 0 10px var(--g);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hero h1{font-family:'Clash Display',sans-serif;font-size:clamp(52px,7.5vw,96px);font-weight:700;
+  line-height:.95;letter-spacing:-4px;margin-bottom:28px}
+.hero h1 .char{display:inline-block;opacity:0;transform:translateY(50px) rotate(6deg);
+  animation:charIn .55s forwards cubic-bezier(.16,1,.3,1)}
+.hero h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-2px;
+  background:linear-gradient(135deg,var(--v2),var(--c) 60%,var(--g));background-size:200%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 5s linear infinite}
+@keyframes shimmer{to{background-position:200% center}}
+@keyframes charIn{to{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.hero-desc{font-size:18px;color:var(--muted);line-height:1.8;max-width:560px;margin:0 auto 48px;
+  opacity:0;animation:fadeUp .7s .85s forwards}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+  opacity:0;animation:fadeUp .7s 1.05s forwards}
+.scroll-hint{position:absolute;bottom:36px;display:flex;flex-direction:column;align-items:center;gap:8px;
+  opacity:0;animation:fadeUp .7s 1.5s forwards}
+.scroll-line{width:1px;height:56px;background:linear-gradient(to bottom,transparent,var(--v2),transparent);
+  animation:scrollPulse 2s ease infinite}
+@keyframes scrollPulse{0%,100%{transform:scaleY(1);opacity:.4}50%{transform:scaleY(1.4);opacity:1}}
+
+/* ══ BTNS ══ */
+.btn-glow{font-size:14px;font-weight:700;padding:15px 36px;border-radius:12px;border:none;
+  background:linear-gradient(135deg,var(--v),var(--v3));color:#fff;cursor:pointer;
+  position:relative;overflow:hidden;letter-spacing:.3px;will-change:transform;transition:box-shadow.3s,transform.15s}
+.btn-glow::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#9f1aff,#6366f1);opacity:0;transition:opacity.3s}
+.btn-glow:hover{box-shadow:0 16px 48px rgba(124,92,252,.55)}
+.btn-glow:hover::before{opacity:1}
+.btn-glow:focus-visible{outline:2px solid var(--v2);outline-offset:4px}
+.btn-glow span{position:relative;z-index:1}
+.btn-wire{font-size:14px;font-weight:600;padding:15px 36px;border-radius:12px;
+  border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);
+  cursor:pointer;backdrop-filter:blur(10px);transition:all.3s}
+.btn-wire:hover{border-color:rgba(167,139,250,.45);background:rgba(124,92,252,.07)}
+.btn-wire:focus-visible{outline:2px solid var(--v2);outline-offset:4px}
+
+/* ══ LAYOUT ══ */
+.wrap{max-width:1000px;margin:0 auto;padding:0 40px 140px;position:relative;z-index:10}
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:2.5px;
+  color:var(--v2);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.sec-label::before{content:'//';color:rgba(167,139,250,.3)}
+.sec-h{font-family:'Clash Display',sans-serif;font-size:clamp(32px,4.5vw,50px);font-weight:700;
+  letter-spacing:-2px;line-height:1;margin-bottom:14px;color:#fff}
+.sec-sub{font-size:16px;color:var(--muted);line-height:1.75;margin-bottom:48px;max-width:580px}
+section{margin-bottom:96px}
+
+/* ══ STATS ══ */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:96px}
+.stat{background:var(--glass);border:1px solid var(--border);border-radius:20px;padding:32px;
+  text-align:center;position:relative;overflow:hidden;will-change:transform}
+.stat::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 0%,rgba(124,92,252,.13),transparent 70%);
+  opacity:0;transition:opacity.4s}
+.stat:hover::before{opacity:1}
+.stat-val{font-family:'Clash Display',sans-serif;font-size:50px;font-weight:700;letter-spacing:-3px;
+  background:linear-gradient(135deg,var(--v2),var(--c));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1;margin-bottom:8px}
+.stat-l{font-size:13px;color:var(--muted);font-weight:500}
+
+/* ══ MARQUEE ══ */
+.mq-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:18px 0;margin-bottom:96px;position:relative}
+.mq-wrap::before,.mq-wrap::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none}
+.mq-wrap::before{left:0;background:linear-gradient(90deg,var(--ink),transparent)}
+.mq-wrap::after{right:0;background:linear-gradient(-90deg,var(--ink),transparent)}
+.mq-track{display:flex;animation:mq 30s linear infinite;white-space:nowrap}
+.mq-item{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:1.5px;
+  color:var(--muted);padding:0 32px;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.mq-item i{color:var(--v2);font-style:normal;font-size:14px}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ══ FEATURES ══ */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.feat{background:var(--glass);border:1px solid var(--border);border-radius:18px;padding:28px;
+  position:relative;overflow:hidden;transition:border-color.35s,transform.35s,box-shadow.35s}
+.feat::after{content:'';position:absolute;inset:0;border-radius:18px;
+  background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(124,92,252,.11),transparent 58%);
+  opacity:0;transition:opacity.3s;pointer-events:none}
+.feat:hover{transform:translateY(-5px);border-color:rgba(124,92,252,.38);
+  box-shadow:0 14px 48px rgba(124,92,252,.12)}
+.feat:hover::after{opacity:1}
+.feat-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;
+  justify-content:center;font-size:22px;margin-bottom:18px}
+.feat-title{font-family:'Clash Display',sans-serif;font-size:17px;font-weight:600;
+  margin-bottom:8px;letter-spacing:-.2px}
+.feat-desc{font-size:14px;color:var(--muted);line-height:1.7}
+
+/* ══ LOGOS ══ */
+.logos-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;
+  background:var(--border);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:96px}
+.logo-cell{background:var(--ink);padding:26px 16px;display:flex;align-items:center;
+  justify-content:center;transition:background.3s}
+.logo-cell:hover{background:rgba(124,92,252,.06)}
+.logo-text{font-family:'Clash Display',sans-serif;font-size:14px;font-weight:700;
+  color:rgba(255,255,255,.15);letter-spacing:-.2px;transition:color.3s;text-align:center}
+.logo-cell:hover .logo-text{color:rgba(255,255,255,.4)}
+
+/* ══ TIMELINE ══ */
+.timeline{position:relative;padding-left:36px}
+.timeline::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:1px;
+  background:linear-gradient(to bottom,var(--v),var(--c),rgba(0,245,160,.3),transparent)}
+.tl-item{position:relative;margin-bottom:44px;opacity:0;transform:translateX(-18px);
+  transition:all.55s cubic-bezier(.16,1,.3,1)}
+.tl-item.on{opacity:1;transform:none}
+.tl-dot{position:absolute;left:-32px;top:5px;width:14px;height:14px;border-radius:50%;
+  border:2px solid var(--v2);background:var(--ink);box-shadow:0 0 14px rgba(124,92,252,.45)}
+.tl-year{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;
+  letter-spacing:2px;color:var(--v2);margin-bottom:5px}
+.tl-title{font-family:'Clash Display',sans-serif;font-size:19px;font-weight:700;
+  letter-spacing:-.3px;margin-bottom:7px;color:#fff}
+.tl-desc{font-size:14px;color:var(--muted);line-height:1.7}
+
+/* ══ PROCESS ══ */
+.proc{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.proc::before{content:'';position:absolute;top:28px;left:12.5%;right:12.5%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--v),var(--c),var(--g),transparent)}
+.pstep{text-align:center;padding:0 14px;position:relative;z-index:1}
+.pnum{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  margin:0 auto 18px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;
+  border:1px solid var(--border);background:var(--ink);color:var(--muted);transition:all.35s}
+.pstep:hover .pnum{border-color:var(--v2);color:var(--v2);box-shadow:0 0 28px rgba(124,92,252,.45)}
+.ptitle{font-size:14px;font-weight:700;color:#fff;margin-bottom:5px}
+.pdesc{font-size:12px;color:var(--muted);line-height:1.6}
+
+/* ══ TECH CHIPS ══ */
+.tech-grid{display:flex;flex-wrap:wrap;gap:9px}
+.chip{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;padding:8px 16px;
+  border-radius:8px;background:var(--glass);border:1px solid var(--border);color:var(--muted);
+  letter-spacing:.5px;transition:all.25s;cursor:default}
+.chip:hover{border-color:rgba(167,139,250,.45);color:var(--v2);transform:translateY(-2px);
+  box-shadow:0 4px 18px rgba(124,92,252,.1)}
+
+/* ══ JOBS ══ */
+.job-list{display:flex;flex-direction:column;gap:12px}
+.job{background:var(--glass);border:1px solid var(--border);border-radius:16px;
+  padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;
+  cursor:pointer;transition:all.35s;position:relative;overflow:hidden}
+.job::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--v2),var(--c));transform:scaleY(0);
+  transform-origin:bottom;transition:transform.35s}
+.job:hover,.job.sel{border-color:rgba(124,92,252,.42);transform:translateX(7px);
+  box-shadow:0 6px 40px rgba(124,92,252,.12)}
+.job:hover::before,.job.sel::before{transform:scaleY(1)}
+.job.sel{background:rgba(124,92,252,.06)}
+.job:focus-visible{outline:2px solid var(--v2);outline-offset:2px}
+.job-title{font-family:'Clash Display',sans-serif;font-size:17px;font-weight:600;
+  margin-bottom:4px;letter-spacing:-.2px}
+.job-stack{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);
+  letter-spacing:.5px;margin-bottom:11px}
+.tags{display:flex;gap:7px;flex-wrap:wrap}
+.tag{font-size:10px;font-weight:700;padding:3px 11px;border-radius:100px;
+  font-family:'JetBrains Mono',monospace;letter-spacing:.3px}
+.t-p{background:rgba(124,92,252,.14);color:#c4b5fd;border:1px solid rgba(124,92,252,.26)}
+.t-b{background:rgba(0,212,255,.09);color:#7dd3f4;border:1px solid rgba(0,212,255,.18)}
+.t-g{background:rgba(148,163,184,.09);color:#94a3b8;border:1px solid rgba(148,163,184,.14)}
+.apply-btn{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.5px;
+  text-transform:uppercase;padding:11px 22px;border-radius:10px;border:1px solid rgba(124,92,252,.38);
+  background:rgba(124,92,252,.09);color:#c4b5fd;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all.3s}
+.apply-btn:hover,.job.sel .apply-btn{background:linear-gradient(135deg,var(--v),var(--v3));
+  color:#fff;border-color:transparent;box-shadow:0 5px 24px rgba(124,92,252,.45)}
+.apply-btn:focus-visible{outline:2px solid var(--v2);outline-offset:2px}
+
+/* ══ GLASS CARD ══ */
+.glass-card{background:var(--glass);border:1px solid var(--border);border-radius:20px;backdrop-filter:blur(20px)}
+
+/* ══ FORM ══ */
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.field label{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.field input,.field textarea,.field select{font-family:'Cabinet Grotesk',sans-serif;font-size:14px;
+  padding:13px 16px;border-radius:10px;border:1px solid var(--border);
+  background:rgba(255,255,255,.025);color:var(--text);outline:none;resize:vertical;
+  transition:all.22s;width:100%;appearance:none}
+.field input:focus,.field textarea:focus{border-color:rgba(124,92,252,.5);
+  box-shadow:0 0 0 3px rgba(124,92,252,.1)}
+.field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:rgba(239,68,68,.5)}
+.field-err{font-family:'JetBrains Mono',monospace;font-size:10px;color:#f87171;letter-spacing:.3px;display:none}
+.field-err.show{display:block}
+.file-drop{border:1.5px dashed rgba(124,92,252,.3);border-radius:14px;padding:30px;text-align:center;
+  cursor:pointer;transition:all.22s;margin-bottom:16px;background:rgba(124,92,252,.02)}
+.file-drop:hover,.file-drop:focus-within{border-color:rgba(124,92,252,.6);background:rgba(124,92,252,.06)}
+.file-drop strong{font-size:15px;color:#fff;display:block;margin-bottom:5px;font-family:'Clash Display',sans-serif}
+.file-drop span{font-size:11px;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:.5px}
+.file-ok{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;
+  font-family:'JetBrains Mono',monospace;color:#00f5a0;background:rgba(0,245,160,.08);
+  border:1px solid rgba(0,245,160,.22);padding:9px 14px;border-radius:10px;margin-bottom:16px}
+
+/* ══ TESTIMONIALS ══ */
+.testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.testi{background:var(--glass);border:1px solid var(--border);border-radius:18px;padding:26px;
+  transition:all.4s;position:relative;overflow:hidden}
+.testi::before{content:'\201C';position:absolute;top:-18px;right:18px;
+  font-family:'Instrument Serif',serif;font-size:130px;color:rgba(124,92,252,.05);line-height:1;pointer-events:none}
+.testi:hover{transform:translateY(-5px);box-shadow:0 16px 50px rgba(124,92,252,.1);border-color:rgba(124,92,252,.32)}
+.stars{color:#fbbf24;font-size:11px;margin-bottom:14px;letter-spacing:2px}
+.tq{font-size:14px;color:#94a3b8;line-height:1.8;margin-bottom:20px;font-style:italic}
+.ta{display:flex;align-items:center;gap:12px}
+.av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;flex-shrink:0;font-family:'Clash Display',sans-serif}
+.tn{font-size:14px;font-weight:700;color:#fff;font-family:'Clash Display',sans-serif}
+.tr{font-size:10px;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:.5px}
+
+/* ══ TEAM ══ */
+.team-card{background:var(--glass);border:1px solid var(--border);border-radius:20px;padding:34px;
+  position:relative;overflow:hidden;transition:all.4s}
+.team-card:hover{border-color:rgba(124,92,252,.4);box-shadow:0 20px 70px rgba(124,92,252,.13)}
+
+/* ══ CTA BOX ══ */
+.cta-box{background:linear-gradient(135deg,rgba(124,92,252,.2),rgba(79,70,229,.13),rgba(0,212,255,.07));
+  border:1px solid rgba(124,92,252,.32);border-radius:24px;padding:72px;text-align:center;position:relative;overflow:hidden}
+.cta-box::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);
+  width:560px;height:460px;background:radial-gradient(circle,rgba(124,92,252,.18),transparent 70%);pointer-events:none}
+.cta-h{font-family:'Clash Display',sans-serif;font-size:clamp(32px,4.5vw,50px);font-weight:700;
+  letter-spacing:-2px;margin-bottom:14px;position:relative}
+.cta-s{font-size:17px;color:var(--muted);margin-bottom:36px;position:relative}
+.cta-acts{display:flex;gap:14px;justify-content:center;position:relative;flex-wrap:wrap}
+
+/* ══ STICKY CTA ══ */
+#sticky-cta{position:fixed;bottom:100px;right:22px;z-index:500;display:flex;gap:9px;align-items:center;
+  background:rgba(7,7,14,.9);border:1px solid rgba(124,92,252,.3);border-radius:100px;
+  padding:9px 16px 9px 12px;backdrop-filter:blur(20px);
+  transform:translateY(80px);opacity:0;transition:all.5s cubic-bezier(.16,1,.3,1)}
+#sticky-cta.show{transform:none;opacity:1}
+#sticky-cta span{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;
+  letter-spacing:1px;color:var(--muted);text-transform:uppercase}
+#sticky-cta button{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;
+  letter-spacing:.5px;padding:7px 14px;border-radius:100px;border:none;
+  background:linear-gradient(135deg,var(--v),var(--v3));color:#fff;cursor:pointer;transition:all.2s}
+#sticky-cta button:hover{box-shadow:0 0 20px rgba(124,92,252,.45);transform:scale(1.04)}
+
+/* ══ EXIT POPUP ══ */
+#exit-popup{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;
+  background:rgba(7,7,14,.82);backdrop-filter:blur(12px);opacity:0;pointer-events:none;transition:opacity.35s}
+#exit-popup.show{opacity:1;pointer-events:all}
+.exit-box{background:rgba(14,14,24,.98);border:1px solid rgba(124,92,252,.3);border-radius:22px;
+  padding:46px;max-width:440px;width:90%;text-align:center;position:relative;
+  transform:translateY(24px) scale(.97);transition:all.35s cubic-bezier(.16,1,.3,1)}
+#exit-popup.show .exit-box{transform:none}
+.exit-close{position:absolute;top:16px;right:18px;background:none;border:none;font-size:18px;
+  color:var(--muted);cursor:pointer;line-height:1;transition:color.2s;padding:4px}
+.exit-close:hover{color:#fff}
+.exit-close:focus-visible{outline:2px solid var(--v2);border-radius:4px}
+
+/* ══ AI WIDGET ══ */
+#ai-toggle{position:fixed;bottom:28px;right:22px;z-index:590;width:50px;height:50px;
+  border-radius:50%;background:linear-gradient(135deg,var(--v),var(--c));border:none;
+  cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 0 0 rgba(124,92,252,.5);animation:aiPulse 2.5s ease infinite;transition:transform.2s}
+#ai-toggle:hover{transform:scale(1.08)}
+#ai-toggle:focus-visible{outline:2px solid var(--v2);outline-offset:4px}
+#ai-toggle.chat-open{animation:none;box-shadow:0 0 24px rgba(124,92,252,.5)}
+@keyframes aiPulse{0%{box-shadow:0 0 0 0 rgba(124,92,252,.5)}70%{box-shadow:0 0 0 12px rgba(124,92,252,0)}100%{box-shadow:0 0 0 0 rgba(124,92,252,0)}}
+
+#ai-widget{position:fixed;bottom:90px;right:22px;z-index:600;width:348px;
+  background:rgba(9,9,18,.97);border:1px solid rgba(124,92,252,.32);border-radius:18px;
+  backdrop-filter:blur(30px);display:flex;flex-direction:column;max-height:500px;
+  transform:translateY(16px) scale(.97);opacity:0;pointer-events:none;
+  transition:all.3s cubic-bezier(.16,1,.3,1)}
+#ai-widget.open{transform:none;opacity:1;pointer-events:all}
+.ai-header{padding:14px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:11px;flex-shrink:0}
+.ai-orb{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--v),var(--c));
+  display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;
+  animation:breathe 3s ease infinite}
+@keyframes breathe{0%,100%{box-shadow:0 0 16px rgba(124,92,252,.4)}50%{box-shadow:0 0 28px rgba(0,212,255,.5)}}
+.ai-title-text{font-family:'Clash Display',sans-serif;font-size:14px;font-weight:700;letter-spacing:-.2px}
+.ai-status{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:1.5px;
+  color:var(--g);text-transform:uppercase;display:flex;align-items:center;gap:5px}
+.ai-status::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--g);animation:pulse 2s infinite}
+#ai-close{margin-left:auto;background:none;border:none;color:var(--muted);font-size:17px;
+  cursor:pointer;padding:4px;line-height:1;transition:color.2s}
+#ai-close:hover{color:#fff}
+#ai-close:focus-visible{outline:2px solid var(--v2);border-radius:4px}
+
+.ai-msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
+.ai-msgs::-webkit-scrollbar{width:3px}
+.ai-msgs::-webkit-scrollbar-thumb{background:rgba(124,92,252,.25);border-radius:3px}
+.msg{max-width:86%;font-size:13px;line-height:1.6;animation:msgIn .28s ease}
+@keyframes msgIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.msg.bot{background:rgba(124,92,252,.09);border:1px solid rgba(124,92,252,.18);
+  border-radius:13px 13px 13px 3px;padding:9px 13px;color:var(--text);align-self:flex-start}
+.msg.user{background:linear-gradient(135deg,rgba(124,92,252,.22),rgba(0,212,255,.12));
+  border:1px solid rgba(124,92,252,.28);border-radius:13px 13px 3px 13px;
+  padding:9px 13px;color:#fff;align-self:flex-end}
+.typing{display:flex;gap:4px;padding:9px 13px;background:rgba(124,92,252,.07);
+  border:1px solid rgba(124,92,252,.13);border-radius:13px 13px 13px 3px;align-self:flex-start;width:50px}
+.typing span{width:5px;height:5px;border-radius:50%;background:var(--v2);animation:dot 1.2s infinite}
+.typing span:nth-child(2){animation-delay:.2s}
+.typing span:nth-child(3){animation-delay:.4s}
+@keyframes dot{0%,60%,100%{transform:scale(1);opacity:.35}30%{transform:scale(1.4);opacity:1}}
+
+.ai-quick{padding:8px 14px;display:flex;gap:5px;flex-wrap:wrap;border-top:1px solid var(--border);flex-shrink:0}
+.q-chip{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.4px;
+  padding:5px 9px;border-radius:100px;border:1px solid rgba(124,92,252,.28);
+  background:rgba(124,92,252,.07);color:var(--v2);cursor:pointer;transition:all.2s;text-transform:uppercase}
+.q-chip:hover{background:rgba(124,92,252,.18);border-color:rgba(124,92,252,.45)}
+.q-chip:focus-visible{outline:2px solid var(--v2)}
+
+.ai-input-row{padding:10px 14px;display:flex;gap:7px;border-top:1px solid var(--border);flex-shrink:0}
+#ai-input{flex:1;font-family:'Cabinet Grotesk',sans-serif;font-size:13px;padding:9px 13px;
+  border-radius:9px;border:1px solid var(--border);background:rgba(255,255,255,.035);
+  color:var(--text);outline:none;transition:border-color.2s}
+#ai-input:focus{border-color:rgba(124,92,252,.45)}
+#ai-send{width:36px;height:36px;border-radius:9px;border:none;
+  background:linear-gradient(135deg,var(--v),var(--v3));color:#fff;cursor:pointer;
+  font-size:15px;display:flex;align-items:center;justify-content:center;transition:all.2s;flex-shrink:0}
+#ai-send:hover{box-shadow:0 0 18px rgba(124,92,252,.45);transform:scale(1.05)}
+#ai-send:focus-visible{outline:2px solid var(--v2)}
+.ai-disclaimer{font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(139,138,170,.4);
+  text-align:center;padding:0 14px 10px;letter-spacing:.3px}
+
+/* ══ TOAST ══ */
+#toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(70px);z-index:9999;
+  padding:13px 22px;border-radius:12px;font-size:13px;font-weight:600;
+  font-family:'JetBrains Mono',monospace;letter-spacing:.3px;opacity:0;
+  transition:all.4s cubic-bezier(.16,1,.3,1);pointer-events:none;white-space:nowrap}
+#toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+#toast.ok{background:rgba(0,245,160,.12);border:1px solid rgba(0,245,160,.35);color:#00f5a0}
+#toast.err{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.35);color:#f87171}
+
+/* ══ FADE IN ══ */
+.fi{opacity:0;transform:translateY(36px);transition:opacity.7s cubic-bezier(.16,1,.3,1),transform.7s cubic-bezier(.16,1,.3,1)}
+.fi.on{opacity:1;transform:none}
+
+/* ══ FOOTER ══ */
+footer{border-top:1px solid var(--border);padding:32px;text-align:center;
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);
+  letter-spacing:1px;position:relative;z-index:10}
+footer span{color:var(--v2)}
+*{scrollbar-width:thin;scrollbar-color:rgba(124,92,252,.25) transparent}
+
+/* ══ MOBILE ══ */
+@media(max-width:768px){
+  nav{padding:14px 18px}
+  .nav-links{display:none}
+  .wrap{padding:0 18px 80px}
+  .stats{grid-template-columns:1fr}
+  .feat-grid{grid-template-columns:1fr}
+  .proc{grid-template-columns:1fr 1fr;gap:22px}
+  .proc::before{display:none}
+  .testi-grid{grid-template-columns:1fr}
+  .fg{grid-template-columns:1fr}
+  .logos-grid{grid-template-columns:repeat(3,1fr)}
+  .cta-box{padding:36px 20px}
+  #ai-widget{width:calc(100vw - 28px);right:14px}
+  #sticky-cta{display:none}
+  div[style*="grid-template-columns:1fr 1fr"]{display:block!important}
+  div[style*="grid-template-columns:1fr 1fr"] .team-card{margin-bottom:16px}
+}
+</style>
+</head>
+<body>
+<!-- ══ ACCESSIBILITY ══ -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div role="status" aria-live="polite" id="live-region" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"></div>
+
+<div id="cur" aria-hidden="true"></div>
+<div id="cur2" aria-hidden="true"></div>
+<div id="noise" aria-hidden="true"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div id="progress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+<!-- ══ STICKY CTA ══ -->
+<div id="sticky-cta" role="complementary" aria-label="Job openings callout">
+  <span>🔥 We're hiring</span>
+  <button onclick="goto('jobs')" aria-label="View job openings">See Roles →</button>
+</div>
+
+<!-- ══ EXIT POPUP ══ -->
+<div id="exit-popup" role="dialog" aria-modal="true" aria-labelledby="exit-title">
+  <div class="exit-box">
+    <button class="exit-close" onclick="closeExit()" aria-label="Close dialog">✕</button>
+    <div aria-hidden="true" style="font-size:44px;margin-bottom:16px">👋</div>
+    <h2 id="exit-title" style="font-family:'Clash Display',sans-serif;font-size:26px;font-weight:700;letter-spacing:-.4px;margin-bottom:10px;color:#fff">Wait — one more thing</h2>
+    <p style="font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:26px">We're actively hiring world-class builders. See if there's a role that fits you.</p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <button class="btn-glow" onclick="goto('jobs');closeExit()"><span>View Open Roles →</span></button>
+      <button class="btn-wire" style="padding:13px 22px;font-size:13px" onclick="closeExit()">No thanks</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="logo-wrap">
+    <div class="logo" aria-label="Innovent">Innovent</div>
+    <div class="logo-sub" aria-hidden="true">Global Technologies</div>
+  </div>
+  <div class="nav-links">
+    <a href="#why">About</a>
+    <a href="#journey">Story</a>
+    <a href="#jobs">Careers</a>
+    <a href="#testi">Team</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="nav-btn" onclick="goto('contact')" aria-label="Get in touch with Innovent">Get in touch →</button>
+</nav>
+
+<!-- ══ HERO ══ -->
+<main id="main-content">
+<section class="hero" aria-labelledby="hero-heading" data-sec="hero">
+  <div class="hero-eyebrow" aria-label="Innovent Global Technologies">
+    <span class="eyebrow-dot" aria-hidden="true"></span>
+    Innovent Global Technologies
+    <span class="eyebrow-dot" aria-hidden="true"></span>
+  </div>
+  <h1 id="hero-heading" aria-label="Build the future. Ship with purpose."></h1>
+  <p class="hero-desc">We are a premium global product studio turning ambitious ideas into software that scales — fast, elegant, and built to last.</p>
+  <div class="hero-cta">
+    <button class="btn-glow" onclick="goto('jobs')" aria-label="Explore open job roles"><span>Explore Roles ↓</span></button>
+    <button class="btn-wire" onclick="goto('contact')" aria-label="Contact Innovent">Contact Us</button>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><div class="scroll-line"></div></div>
+</section>
+
+<div class="wrap">
+
+<!-- STATS -->
+<div class="stats fi" role="region" aria-label="Company statistics">
+  <div class="stat">
+    <div class="stat-val" data-t="142" data-s="+" aria-label="142 plus projects shipped">0</div>
+    <div class="stat-l">Projects shipped</div>
+  </div>
+  <div class="stat">
+    <div class="stat-val" data-t="98" data-s="%" aria-label="98 percent client satisfaction">0</div>
+    <div class="stat-l">Client satisfaction</div>
+  </div>
+  <div class="stat">
+    <div class="stat-val" data-t="8" data-s=" yrs" aria-label="8 years building products">0</div>
+    <div class="stat-l">Building products</div>
+  </div>
+</div>
+
+<!-- CLIENT LOGOS -->
+<section aria-label="Notable clients and partners">
+  <div class="logos-grid fi">
+    <div class="logo-cell"><div class="logo-text">Accenture</div></div>
+    <div class="logo-cell"><div class="logo-text">Deloitte</div></div>
+    <div class="logo-cell"><div class="logo-text">McKinsey</div></div>
+    <div class="logo-cell"><div class="logo-text">Razorpay</div></div>
+    <div class="logo-cell"><div class="logo-text">Zepto</div></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq-wrap fi" aria-label="Technology stack" role="marquee">
+  <div class="mq-track" aria-hidden="true">
+    <div class="mq-item"><i>✦</i>React</div><div class="mq-item"><i>✦</i>Node.js</div>
+    <div class="mq-item"><i>✦</i>Kubernetes</div><div class="mq-item"><i>✦</i>TypeScript</div>
+    <div class="mq-item"><i>✦</i>AWS</div><div class="mq-item"><i>✦</i>Figma</div>
+    <div class="mq-item"><i>✦</i>PostgreSQL</div><div class="mq-item"><i>✦</i>GraphQL</div>
+    <div class="mq-item"><i>✦</i>Docker</div><div class="mq-item"><i>✦</i>Next.js</div>
+    <div class="mq-item"><i>✦</i>React</div><div class="mq-item"><i>✦</i>Node.js</div>
+    <div class="mq-item"><i>✦</i>Kubernetes</div><div class="mq-item"><i>✦</i>TypeScript</div>
+    <div class="mq-item"><i>✦</i>AWS</div><div class="mq-item"><i>✦</i>Figma</div>
+    <div class="mq-item"><i>✦</i>PostgreSQL</div><div class="mq-item"><i>✦</i>GraphQL</div>
+    <div class="mq-item"><i>✦</i>Docker</div><div class="mq-item"><i>✦</i>Next.js</div>
+  </div>
+</div>
+
+<!-- WHY -->
+<section id="why" aria-labelledby="why-heading">
+  <div class="fi">
+    <div class="sec-label">Why join us</div>
+    <h2 id="why-heading" class="sec-h">A team worth<br>building with</h2>
+    <p class="sec-sub">We move fast, think deeply, and care about craft at every level.</p>
+  </div>
+  <div class="feat-grid fi" role="list">
+    <article class="feat" role="listitem"><div class="feat-icon" style="background:rgba(124,92,252,.14);border:1px solid rgba(124,92,252,.28)">⚡</div><h3 class="feat-title">Move fast</h3><p class="feat-desc">Ship every week. No endless planning — real products reaching real users.</p></article>
+    <article class="feat" role="listitem"><div class="feat-icon" style="background:rgba(0,212,255,.11);border:1px solid rgba(0,212,255,.23)">🌍</div><h3 class="feat-title">Work globally</h3><p class="feat-desc">Distributed across 22 countries. Async-first, trust by default.</p></article>
+    <article class="feat" role="listitem"><div class="feat-icon" style="background:rgba(0,245,160,.09);border:1px solid rgba(0,245,160,.2)">▲</div><h3 class="feat-title">Grow fast</h3><p class="feat-desc">$3k/yr learning budget. Mentorship from senior engineers and designers.</p></article>
+    <article class="feat" role="listitem"><div class="feat-icon" style="background:rgba(255,107,107,.09);border:1px solid rgba(255,107,107,.2)">🔮</div><h3 class="feat-title">Equity included</h3><p class="feat-desc">Real ownership in what you build. Meaningful equity packages from day one.</p></article>
+    <article class="feat" role="listitem"><div class="feat-icon" style="background:rgba(251,191,36,.09);border:1px solid rgba(251,191,36,.2)">♾️</div><h3 class="feat-title">No meetings Fridays</h3><p class="feat-desc">Deep work protected. Friday is for flow state — code, design, ship.</p></article>
+    <article class="feat" role="listitem"><div class="feat-icon" style="background:rgba(124,92,252,.11);border:1px solid rgba(124,92,252,.23)">🛡️</div><h3 class="feat-title">Full benefits</h3><p class="feat-desc">Health, dental, vision — covered globally. $1k/yr home office stipend.</p></article>
+  </div>
+</section>
+
+<!-- JOURNEY TIMELINE -->
+<section id="journey" aria-labelledby="journey-heading">
+  <div class="fi">
+    <div class="sec-label">Our Story</div>
+    <h2 id="journey-heading" class="sec-h">How we got here</h2>
+    <p class="sec-sub">Every line of code has a story. Here's ours.</p>
+  </div>
+  <div class="timeline fi" role="list">
+    <div class="tl-item" role="listitem">
+      <div class="tl-dot" aria-hidden="true"></div>
+      <time class="tl-year" datetime="2017">2017</time>
+      <h3 class="tl-title">The spark</h3>
+      <p class="tl-desc">Chaitanya shipped his first SaaS product from a small apartment in Bangalore — 0 to 400 users in 30 days. The obsession with craft began.</p>
+    </div>
+    <div class="tl-item" role="listitem">
+      <div class="tl-dot" aria-hidden="true" style="border-color:var(--c);box-shadow:0 0 14px rgba(0,212,255,.45)"></div>
+      <time class="tl-year" datetime="2019">2019</time>
+      <h3 class="tl-title">First team, first funding</h3>
+      <p class="tl-desc">Dr. Prasanna Kumar joined as Chief Mentor. First seed round closed. First enterprise client — a Fortune 500 logistics company — shipped in 6 weeks.</p>
+    </div>
+    <div class="tl-item" role="listitem">
+      <div class="tl-dot" aria-hidden="true" style="border-color:var(--g);box-shadow:0 0 14px rgba(0,245,160,.45)"></div>
+      <time class="tl-year" datetime="2021">2021</time>
+      <h3 class="tl-title">Going global</h3>
+      <p class="tl-desc">Priya joined as COO, scaled operations to 12 countries. Nikhitha joined as CTO and rebuilt the engineering culture from the ground up. 50 products shipped.</p>
+    </div>
+    <div class="tl-item" role="listitem">
+      <div class="tl-dot" aria-hidden="true" style="border-color:var(--warm);box-shadow:0 0 14px rgba(255,107,107,.45)"></div>
+      <time class="tl-year" datetime="2024">2024</time>
+      <h3 class="tl-title">142 products. 22 countries. Still day one.</h3>
+      <p class="tl-desc">98% client satisfaction across 142 shipped products. Offices on 4 continents. We're still building — and still hiring the best.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="proc" aria-labelledby="proc-heading">
+  <div class="fi">
+    <div class="sec-label">Our process</div>
+    <h2 id="proc-heading" class="sec-h">How we ship</h2>
+    <p class="sec-sub">From idea to production, zero compromise on quality.</p>
+  </div>
+  <div class="proc fi" role="list">
+    <div class="pstep" role="listitem"><div class="pnum" style="color:var(--v2)">01</div><div class="ptitle">Discovery</div><div class="pdesc">Deep dive into vision, constraints and users.</div></div>
+    <div class="pstep" role="listitem"><div class="pnum" style="color:var(--c)">02</div><div class="ptitle">Design Sprint</div><div class="pdesc">High-fidelity prototypes in 5 days.</div></div>
+    <div class="pstep" role="listitem"><div class="pnum" style="color:var(--g)">03</div><div class="ptitle">Build</div><div class="pdesc">Weekly sprints. Daily deploys. Constant feedback.</div></div>
+    <div class="pstep" role="listitem"><div class="pnum" style="color:var(--warm)">04</div><div class="ptitle">Launch</div><div class="pdesc">Zero-downtime deploy with monitoring & support.</div></div>
+  </div>
+</section>
+
+<!-- TECH -->
+<section aria-labelledby="stack-heading">
+  <div class="fi">
+    <div class="sec-label">Stack</div>
+    <h2 id="stack-heading" class="sec-h">What we build with</h2>
+    <p class="sec-sub">Modern, battle-tested technologies. No legacy baggage.</p>
+  </div>
+  <div class="tech-grid fi" role="list" aria-label="Technology stack">
+    <div class="chip" role="listitem">React</div><div class="chip" role="listitem">Next.js</div><div class="chip" role="listitem">TypeScript</div>
+    <div class="chip" role="listitem">Node.js</div><div class="chip" role="listitem">PostgreSQL</div><div class="chip" role="listitem">Redis</div>
+    <div class="chip" role="listitem">AWS</div><div class="chip" role="listitem">Kubernetes</div><div class="chip" role="listitem">Docker</div>
+    <div class="chip" role="listitem">GraphQL</div><div class="chip" role="listitem">Figma</div><div class="chip" role="listitem">Terraform</div>
+    <div class="chip" role="listitem">Vercel</div><div class="chip" role="listitem">Stripe</div><div class="chip" role="listitem">Prisma</div>
+    <div class="chip" role="listitem">GitHub Actions</div>
+  </div>
+</section>
+
+<!-- JOBS -->
+<section id="jobs" aria-labelledby="jobs-heading" data-sec="jobs">
+  <div class="fi">
+    <div class="sec-label">Open roles</div>
+    <h2 id="jobs-heading" class="sec-h">Join our team</h2>
+    <p class="sec-sub">We're hiring passionate builders worldwide.</p>
+  </div>
+  <div class="job-list fi" role="list" aria-label="Open job positions">
+    <article class="job" role="listitem" tabindex="0" aria-label="Full Stack Engineer - Full-time Remote position"
+      onclick="selJob(this,'Full Stack Engineer','React · Node.js · PostgreSQL','Full-time · Remote · 3+ yrs')"
+      onkeydown="if(event.key==='Enter'||event.key===' ')selJob(this,'Full Stack Engineer','React · Node.js · PostgreSQL','Full-time · Remote · 3+ yrs')">
+      <div><div class="job-title">Full Stack Engineer</div><div class="job-stack">REACT · NODE.JS · POSTGRESQL</div>
+      <div class="tags"><span class="tag t-p">Full-time</span><span class="tag t-b">Remote</span><span class="tag t-g">3+ yrs</span></div></div>
+      <button class="apply-btn" onclick="event.stopPropagation();selJob(this.closest('.job'),'Full Stack Engineer','React · Node.js · PostgreSQL','Full-time · Remote · 3+ yrs')" aria-label="Apply for Full Stack Engineer">Apply Now →</button>
+    </article>
+    <article class="job" role="listitem" tabindex="0" aria-label="UI/UX Designer - Full-time Hybrid position"
+      onclick="selJob(this,'UI/UX Designer','Figma · Design Systems · Prototyping','Full-time · Hybrid · 2+ yrs')"
+      onkeydown="if(event.key==='Enter'||event.key===' ')selJob(this,'UI/UX Designer','Figma · Design Systems · Prototyping','Full-time · Hybrid · 2+ yrs')">
+      <div><div class="job-title">UI/UX Designer</div><div class="job-stack">FIGMA · DESIGN SYSTEMS · PROTOTYPING</div>
+      <div class="tags"><span class="tag t-p">Full-time</span><span class="tag t-b">Hybrid</span><span class="tag t-g">2+ yrs</span></div></div>
+      <button class="apply-btn" onclick="event.stopPropagation();selJob(this.closest('.job'),'UI/UX Designer','Figma · Design Systems · Prototyping','Full-time · Hybrid · 2+ yrs')" aria-label="Apply for UI/UX Designer">Apply Now →</button>
+    </article>
+    <article class="job" role="listitem" tabindex="0" aria-label="DevOps Engineer - Contract Remote position"
+      onclick="selJob(this,'DevOps Engineer','AWS · Kubernetes · CI/CD','Contract · Remote · 4+ yrs')"
+      onkeydown="if(event.key==='Enter'||event.key===' ')selJob(this,'DevOps Engineer','AWS · Kubernetes · CI/CD','Contract · Remote · 4+ yrs')">
+      <div><div class="job-title">DevOps Engineer</div><div class="job-stack">AWS · KUBERNETES · CI/CD</div>
+      <div class="tags"><span class="tag t-b">Contract</span><span class="tag t-b">Remote</span><span class="tag t-g">4+ yrs</span></div></div>
+      <button class="apply-btn" onclick="event.stopPropagation();selJob(this.closest('.job'),'DevOps Engineer','AWS · Kubernetes · CI/CD','Contract · Remote · 4+ yrs')" aria-label="Apply for DevOps Engineer">Apply Now →</button>
+    </article>
+    <article class="job" role="listitem" tabindex="0" aria-label="AI/ML Engineer - Full-time Remote position"
+      onclick="selJob(this,'AI/ML Engineer','Python · PyTorch · LangChain','Full-time · Remote · 4+ yrs')"
+      onkeydown="if(event.key==='Enter'||event.key===' ')selJob(this,'AI/ML Engineer','Python · PyTorch · LangChain','Full-time · Remote · 4+ yrs')">
+      <div><div class="job-title">AI/ML Engineer</div><div class="job-stack">PYTHON · PYTORCH · LANGCHAIN</div>
+      <div class="tags"><span class="tag t-p">Full-time</span><span class="tag t-b">Remote</span><span class="tag t-g">4+ yrs</span></div></div>
+      <button class="apply-btn" onclick="event.stopPropagation();selJob(this.closest('.job'),'AI/ML Engineer','Python · PyTorch · LangChain','Full-time · Remote · 4+ yrs')" aria-label="Apply for AI/ML Engineer">Apply Now →</button>
+    </article>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section id="apply" aria-labelledby="apply-heading">
+  <div class="sec-label">Apply</div>
+  <div class="glass-card" style="padding:42px">
+    <h2 id="apply-heading" style="font-family:'Clash Display',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.5px;margin-bottom:8px">
+      Apply for <span id="rname" style="background:linear-gradient(135deg,var(--v2),var(--c));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">a role</span>
+    </h2>
+    <p id="rmeta" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.5px;margin-bottom:30px">SELECT AN OPEN POSITION ABOVE TO GET STARTED</p>
+    <div class="fg">
+      <div class="field">
+        <label for="an">Full name</label>
+        <input id="an" type="text" placeholder="Aman Verma" autocomplete="name" aria-required="true" aria-describedby="an-err">
+        <span id="an-err" class="field-err" role="alert">Please enter your full name</span>
+      </div>
+      <div class="field">
+        <label for="ae">Email</label>
+        <input id="ae" type="email" placeholder="aman@example.com" autocomplete="email" aria-required="true" aria-describedby="ae-err">
+        <span id="ae-err" class="field-err" role="alert">Please enter a valid email</span>
+      </div>
+    </div>
+    <div id="fok" class="file-ok" style="display:none" role="status">✓ <span id="fn"></span></div>
+    <div class="file-drop" role="button" tabindex="0" aria-label="Upload resume PDF"
+      onclick="document.getElementById('rf').click()"
+      onkeydown="if(event.key==='Enter'||event.key===' ')document.getElementById('rf').click()">
+      <strong>Upload Resume</strong>
+      <span>Click to browse · PDF only · Max 5 MB</span>
+      <input id="rf" type="file" accept=".pdf" style="display:none" onchange="handleFile(this)" aria-label="Resume file upload">
+    </div>
+    <button class="btn-glow" style="width:100%;padding:16px;font-size:15px" onclick="subApply()" aria-label="Submit job application"><span>Submit Application →</span></button>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section aria-labelledby="testi-clients-heading">
+  <div class="fi">
+    <div class="sec-label">Testimonials</div>
+    <h2 id="testi-clients-heading" class="sec-h">What clients say</h2>
+    <p class="sec-sub">Real feedback from the teams we've worked with.</p>
+  </div>
+  <div class="testi-grid fi">
+    <article class="testi">
+      <div class="stars" aria-label="5 stars">★★★★★</div>
+      <blockquote class="tq">"Innovent shipped our entire platform in 8 weeks. The code quality was exceptional — our in-house engineers were genuinely impressed."</blockquote>
+      <div class="ta"><div class="av" style="background:rgba(124,92,252,.2);color:#c4b5fd" aria-hidden="true">AR</div>
+      <div><div class="tn">Arjun Reddy</div><div class="tr">CTO · FinanceOS</div></div></div>
+    </article>
+    <article class="testi">
+      <div class="stars" aria-label="5 stars">★★★★★</div>
+      <blockquote class="tq">"Async-first culture that actually works. Our project delivered on time with zero surprises. That's rare in this industry."</blockquote>
+      <div class="ta"><div class="av" style="background:rgba(0,212,255,.14);color:#7dd3f4" aria-hidden="true">SM</div>
+      <div><div class="tn">Sarah Mitchell</div><div class="tr">VP Product · Logify</div></div></div>
+    </article>
+    <article class="testi">
+      <div class="stars" aria-label="5 stars">★★★★★</div>
+      <blockquote class="tq">"The design sprint alone was worth every rupee. 5 days and we had a prototype our investors loved. We were funded in the next round."</blockquote>
+      <div class="ta"><div class="av" style="background:rgba(0,245,160,.14);color:#00f5a0" aria-hidden="true">KS</div>
+      <div><div class="tn">Kavita Sharma</div><div class="tr">Founder · GreenStack</div></div></div>
+    </article>
+    <article class="testi">
+      <div class="stars" aria-label="5 stars">★★★★★</div>
+      <blockquote class="tq">"Working with Innovent feels like having a world-class engineering team embedded in your company. They think like owners."</blockquote>
+      <div class="ta"><div class="av" style="background:rgba(255,107,107,.14);color:#fb923c" aria-hidden="true">DM</div>
+      <div><div class="tn">Daniel Moore</div><div class="tr">CEO · Nexio Health</div></div></div>
+    </article>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="testi" aria-labelledby="team-heading">
+  <div class="fi">
+    <div class="sec-label">Meet the team</div>
+    <h2 id="team-heading" class="sec-h">The minds behind<br>Innovent</h2>
+    <p class="sec-sub">A world-class leadership team united by craft, speed, and purpose.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px" class="fi">
+    <article class="team-card">
+      <div style="position:absolute;top:-50px;left:-50px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(124,92,252,.22),transparent 70%);pointer-events:none" aria-hidden="true"></div>
+      <div style="position:absolute;top:16px;right:18px;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:2px;color:var(--v2);background:rgba(124,92,252,.11);border:1px solid rgba(124,92,252,.26);padding:4px 11px;border-radius:100px">FOUNDER</div>
+      <div style="width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,rgba(124,92,252,.4),rgba(79,70,229,.6));display:flex;align-items:center;justify-content:center;font-family:'Clash Display',sans-serif;font-size:24px;font-weight:700;color:#fff;margin-bottom:18px;border:2px solid rgba(124,92,252,.42);box-shadow:0 0 36px rgba(124,92,252,.3)" aria-hidden="true">C</div>
+      <h3 style="font-family:'Clash Display',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.4px;margin-bottom:3px;color:#fff">Chaitanya</h3>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:2px;color:var(--v2);text-transform:uppercase;margin-bottom:14px">Founder & Visionary</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.75">The driving force behind Innovent Global Technologies. Chaitanya built this company from the ground up with a singular vision — to make world-class software accessible to every ambitious idea.</p>
+    </article>
+    <article class="team-card">
+      <div style="position:absolute;top:-50px;left:-50px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,255,.18),transparent 70%);pointer-events:none" aria-hidden="true"></div>
+      <div style="position:absolute;top:16px;right:18px;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:2px;color:#7dd3f4;background:rgba(0,212,255,.09);border:1px solid rgba(0,212,255,.22);padding:4px 11px;border-radius:100px">CHIEF MENTOR</div>
+      <div style="width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,rgba(0,212,255,.28),rgba(0,130,200,.48));display:flex;align-items:center;justify-content:center;font-family:'Clash Display',sans-serif;font-size:24px;font-weight:700;color:#fff;margin-bottom:18px;border:2px solid rgba(0,212,255,.38);box-shadow:0 0 36px rgba(0,212,255,.24)" aria-hidden="true">P</div>
+      <h3 style="font-family:'Clash Display',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.4px;margin-bottom:3px;color:#fff">Dr. Prasanna Kumar</h3>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:2px;color:#7dd3f4;text-transform:uppercase;margin-bottom:14px">Chief Mentor</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.75">With decades of deep academic and industry expertise, Dr. Prasanna Kumar shapes the strategic direction and intellectual foundations of everything we build at Innovent.</p>
+    </article>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px" class="fi">
+    <article class="team-card">
+      <div style="position:absolute;top:-50px;left:-50px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(0,245,160,.16),transparent 70%);pointer-events:none" aria-hidden="true"></div>
+      <div style="position:absolute;top:16px;right:18px;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:2px;color:#00f5a0;background:rgba(0,245,160,.09);border:1px solid rgba(0,245,160,.22);padding:4px 11px;border-radius:100px">COO</div>
+      <div style="width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,rgba(0,245,160,.28),rgba(0,180,100,.48));display:flex;align-items:center;justify-content:center;font-family:'Clash Display',sans-serif;font-size:24px;font-weight:700;color:#fff;margin-bottom:18px;border:2px solid rgba(0,245,160,.38);box-shadow:0 0 36px rgba(0,245,160,.22)" aria-hidden="true">P</div>
+      <h3 style="font-family:'Clash Display',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.4px;margin-bottom:3px;color:#fff">Priya</h3>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:2px;color:#00f5a0;text-transform:uppercase;margin-bottom:14px">Chief Operating Officer</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.75">Priya orchestrates the operational engine of Innovent — keeping global teams aligned, clients delighted, and projects delivered with precision, speed, and zero compromise on quality.</p>
+    </article>
+    <article class="team-card">
+      <div style="position:absolute;top:-50px;left:-50px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,107,.18),transparent 70%);pointer-events:none" aria-hidden="true"></div>
+      <div style="position:absolute;top:16px;right:18px;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:2px;color:#fb923c;background:rgba(255,107,107,.09);border:1px solid rgba(255,107,107,.22);padding:4px 11px;border-radius:100px">CTO</div>
+      <div style="width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,rgba(255,107,107,.32),rgba(200,60,60,.48));display:flex;align-items:center;justify-content:center;font-family:'Clash Display',sans-serif;font-size:24px;font-weight:700;color:#fff;margin-bottom:18px;border:2px solid rgba(255,107,107,.38);box-shadow:0 0 36px rgba(255,107,107,.24)" aria-hidden="true">N</div>
+      <h3 style="font-family:'Clash Display',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.4px;margin-bottom:3px;color:#fff">Nikhitha</h3>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:2px;color:#fb923c;text-transform:uppercase;margin-bottom:14px">Chief Technology Officer</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.75">Nikhitha leads all things technical at Innovent — from architecture decisions and engineering culture to shipping production-grade software that stands the test of scale and time.</p>
+    </article>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="contact-heading" data-sec="contact">
+  <div class="fi">
+    <div class="sec-label">Contact</div>
+    <h2 id="contact-heading" class="sec-h">Start a conversation</h2>
+    <p class="sec-sub">Have a project in mind? We'd love to hear from you.</p>
+  </div>
+  <div class="glass-card fi" style="padding:42px">
+    <h3 style="font-family:'Clash Display',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.3px;margin-bottom:6px">Send us a message</h3>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-bottom:30px;letter-spacing:.5px">WE REPLY WITHIN 24 HOURS, ALWAYS.</p>
+    <div class="fg">
+      <div class="field">
+        <label for="cn">Name</label>
+        <input id="cn" type="text" placeholder="Your name" autocomplete="name" aria-required="true" aria-describedby="cn-err">
+        <span id="cn-err" class="field-err" role="alert">Please enter your name</span>
+      </div>
+      <div class="field">
+        <label for="ce">Email</label>
+        <input id="ce" type="email" placeholder="you@example.com" autocomplete="email" aria-required="true" aria-describedby="ce-err">
+        <span id="ce-err" class="field-err" role="alert">Please enter a valid email</span>
+      </div>
+    </div>
+    <div class="field">
+      <label for="cm">Message</label>
+      <textarea id="cm" placeholder="Tell us about your project, timeline, and goals..." style="min-height:120px" aria-required="true" aria-describedby="cm-err"></textarea>
+      <span id="cm-err" class="field-err" role="alert">Please enter your message</span>
+    </div>
+    <button class="btn-glow" style="width:100%;padding:16px;font-size:15px" onclick="subContact()" aria-label="Send contact message"><span>Send Message →</span></button>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-box fi" role="complementary" aria-label="Call to action">
+  <h2 class="cta-h">Ready to build<br>something great?</h2>
+  <p class="cta-s">Join Innovent Global Technologies — remote-first, async, always shipping.</p>
+  <div class="cta-acts">
+    <button class="btn-glow" onclick="goto('jobs')"><span>View Open Roles</span></button>
+    <button class="btn-wire" onclick="goto('contact')">Contact Us</button>
+  </div>
+</div>
+
+</div>
+</main>
+
+<footer role="contentinfo">
+  <p>© 2025 <span>Innovent Global Technologies</span> · Built with craft · Remote-first · Always hiring</p>
+</footer>
+
+<!-- ══ AI CHAT ══ -->
+<button id="ai-toggle" onclick="toggleAI()" aria-label="Open AI assistant" aria-expanded="false" aria-controls="ai-widget">🤖</button>
+
+<div id="ai-widget" role="dialog" aria-labelledby="ai-dialog-title" aria-modal="false">
+  <div class="ai-header">
+    <div class="ai-orb" aria-hidden="true">✦</div>
+    <div>
+      <div id="ai-dialog-title" class="ai-title-text">Innovent AI</div>
+      <div class="ai-status" role="status">Online · Ready to help</div>
+    </div>
+    <button id="ai-close" onclick="toggleAI()" aria-label="Close AI assistant">✕</button>
+  </div>
+  <div class="ai-msgs" id="ai-msgs" aria-live="polite" aria-label="Chat messages">
+    <div class="msg bot" role="article">👋 Hi! I'm Innovent's AI assistant. Ask me anything — about our company, open roles, services, or tech stack!</div>
+  </div>
+  <div class="ai-quick" id="ai-quick" aria-label="Quick questions">
+    <button class="q-chip" onclick="askAI('What services does Innovent offer?')">Services</button>
+    <button class="q-chip" onclick="askAI('Tell me about open roles')">Roles</button>
+    <button class="q-chip" onclick="askAI('What is your tech stack?')">Stack</button>
+    <button class="q-chip" onclick="askAI('Tell me about the founder Chaitanya')">Founder</button>
+  </div>
+  <div class="ai-input-row">
+    <input id="ai-input" type="text" placeholder="Ask anything about Innovent..." aria-label="Chat message input"
+      onkeydown="if(event.key==='Enter')sendAI()">
+    <button id="ai-send" onclick="sendAI()" aria-label="Send message">↑</button>
+  </div>
+  <div class="ai-disclaimer">Powered by Claude · Responses may not be 100% accurate</div>
+</div>
+
+<div id="toast" role="status" aria-live="assertive"></div>
+
+<script>
+/* ══════════════════════════════════════
+   GPU-OPTIMIZED CANVAS — only runs
+   if device is capable
+══════════════════════════════════════ */
+const prefersReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const canvas=document.getElementById('bg-canvas');
+
+if(!prefersReduced){
+  const ctx=canvas.getContext('2d',{alpha:true,desynchronized:true});
+  let W,H,frame=0,shooters=[];
+  let stars=[],nodes=[],globePts=[],arcLines=[];
+  let globeRot=0;
+
+  /* Cap particles on mobile */
+  const isMob=window.innerWidth<768;
+  const STAR_COUNT=isMob?60:160;
+  const NODE_COUNT=isMob?10:20;
+
+  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight}
+  resize();window.addEventListener('resize',()=>{resize();initScene()});
+
+  const rand=(a,b)=>a+Math.random()*(b-a);
+
+  function initScene(){
+    stars=Array.from({length:STAR_COUNT},()=>({
+      x:rand(0,W),y:rand(0,H),r:rand(.3,1.6),
+      sy:rand(.0004,.0018),o:rand(.1,.85),po:rand(0,Math.PI*2)
+    }));
+    nodes=Array.from({length:NODE_COUNT},()=>({
+      x:rand(0,W),y:rand(0,H),vx:rand(-.18,.18),vy:rand(-.18,.18),r:rand(1,2.8)
+    }));
+    if(!isMob){
+      globePts=[];
+      const GR=Math.min(W,H)*.22;
+      for(let lat=-80;lat<=80;lat+=20)for(let lon=0;lon<360;lon+=14){
+        const phi=(90-lat)*Math.PI/180,theta=lon*Math.PI/180;
+        globePts.push({
+          ox:GR*Math.sin(phi)*Math.cos(theta),
+          oy:GR*Math.cos(phi),
+          oz:GR*Math.sin(phi)*Math.sin(theta)
+        });
+      }
+      arcLines=Array.from({length:10},()=>({a:rand(0,Math.PI*2),s:rand(.001,.004),r:rand(.3,.65)}));
+    }
+  }
+  initScene();
+
+  window.addEventListener('scroll',()=>{globeRot=scrollY*.0009},{passive:true});
+
+  let lastT=0;
+  function draw(ts){
+    /* throttle to ~50fps for performance */
+    if(ts-lastT<18){requestAnimationFrame(draw);return}
+    lastT=ts;
+    frame++;
+    const t=frame*.016;
+    const GX=W*.78,GY=H*.5,GR=Math.min(W,H)*.22;
+
+    ctx.clearRect(0,0,W,H);
+
+    /* Stars */
+    stars.forEach(s=>{
+      const op=s.o*(0.55+0.45*Math.sin(t*s.sy*200+s.po));
+      ctx.fillStyle=`rgba(167,139,250,${op.toFixed(2)})`;
+      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,6.283);ctx.fill();
+      s.y+=s.sy*16;if(s.y>H+2){s.y=-2;s.x=rand(0,W)}
+    });
+
+    /* Shooters */
+    if(!isMob&&Math.random()<.005){
+      shooters.push({x:rand(0,W*.65),y:rand(0,H*.38),vx:rand(4,6.5),vy:rand(1.4,2.8),l:rand(55,110),life:1});
+    }
+    shooters=shooters.filter(s=>s.life>0);
+    shooters.forEach(s=>{
+      const g=ctx.createLinearGradient(s.x,s.y,s.x-s.l,s.y-s.l*.4);
+      g.addColorStop(0,`rgba(255,255,255,${(s.life*.85).toFixed(2)})`);g.addColorStop(1,'rgba(255,255,255,0)');
+      ctx.strokeStyle=g;ctx.lineWidth=1.4;ctx.beginPath();ctx.moveTo(s.x,s.y);ctx.lineTo(s.x-s.l,s.y-s.l*.4);ctx.stroke();
+      s.x+=s.vx;s.y+=s.vy;s.life-=.03;
+    });
+
+    /* Network */
+    nodes.forEach(n=>{n.x+=n.vx;n.y+=n.vy;if(n.x<0||n.x>W)n.vx*=-1;if(n.y<0||n.y>H)n.vy*=-1});
+    for(let i=0;i<nodes.length;i++){
+      for(let j=i+1;j<nodes.length;j++){
+        const dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,d2=dx*dx+dy*dy;
+        if(d2<22500){
+          const op=((1-Math.sqrt(d2)/150)*.18).toFixed(2);
+          ctx.strokeStyle=`rgba(124,92,252,${op})`;ctx.lineWidth=.65;
+          ctx.beginPath();ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.stroke();
+        }
+      }
+    }
+    nodes.forEach(n=>{
+      const g=ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,n.r*2.5);
+      g.addColorStop(0,'rgba(167,139,250,.85)');g.addColorStop(1,'rgba(124,92,252,0)');
+      ctx.fillStyle=g;ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,6.283);ctx.fill();
+    });
+
+    /* Globe */
+    if(!isMob&&globePts.length){
+      const rot=t*.16+globeRot;
+      const gg=ctx.createRadialGradient(GX,GY,0,GX,GY,GR*1.25);
+      gg.addColorStop(0,'rgba(124,92,252,.06)');gg.addColorStop(.7,'rgba(0,212,255,.025)');gg.addColorStop(1,'transparent');
+      ctx.fillStyle=gg;ctx.beginPath();ctx.arc(GX,GY,GR*1.25,0,6.283);ctx.fill();
+      ctx.strokeStyle='rgba(124,92,252,.12)';ctx.lineWidth=.8;ctx.beginPath();ctx.arc(GX,GY,GR,0,6.283);ctx.stroke();
+      const cosR=Math.cos(rot),sinR=Math.sin(rot);
+      globePts.forEach(p=>{
+        const x2=p.ox*cosR+p.oz*sinR,z2=-p.ox*sinR+p.oz*cosR;
+        if(z2>-GR*.08){
+          const op=(.12+(z2+GR)/(GR*2)*.55).toFixed(2);
+          ctx.fillStyle=`rgba(124,92,252,${op})`;ctx.beginPath();ctx.arc(GX+x2,GY+p.oy,1,0,6.283);ctx.fill();
+        }
+      });
+      [-36,0,36].forEach((lat,li)=>{
+        const phi=(90-lat)*Math.PI/180,ry=GR*Math.cos(phi),rx=GR*Math.sin(phi);
+        if(Math.abs(ry)<GR){
+          ctx.strokeStyle=`rgba(0,212,255,${(.055+li*.025).toFixed(3)})`;ctx.lineWidth=.6;
+          ctx.beginPath();ctx.ellipse(GX,GY+ry*Math.cos(0),rx,.26*rx,0,0,6.283);ctx.stroke();
+        }
+      });
+      arcLines.forEach(l=>{
+        l.a+=l.s;
+        const x1=GX+GR*Math.cos(l.a)*l.r,y1=GY+GR*Math.sin(l.a)*l.r*.5;
+        const x2b=GX+GR*Math.cos(l.a+Math.PI*.7)*l.r,y2b=GY+GR*Math.sin(l.a+Math.PI*.7)*l.r*.5;
+        ctx.strokeStyle='rgba(0,245,160,.1)';ctx.lineWidth=.9;
+        ctx.beginPath();ctx.moveTo(x1,y1);ctx.quadraticCurveTo(GX,GY-GR*l.r*.28,x2b,y2b);ctx.stroke();
+        const pct=t%1;
+        const qx=GX+GR*Math.cos(l.a+pct*Math.PI*.7)*l.r;
+        const qy=GY+GR*Math.sin(l.a+pct*Math.PI*.7)*l.r*.5;
+        ctx.fillStyle='rgba(0,245,160,.45)';ctx.beginPath();ctx.arc(qx,qy,1.8,0,6.283);ctx.fill();
+      });
+    }
+
+    /* Nebula blobs — GPU-composited */
+    [{x:W*.1,y:H*.15,r:280,c:'124,92,252'},{x:W*.85,y:H*.3,r:220,c:'0,212,255'},{x:W*.28,y:H*.72,r:200,c:'0,245,160'}].forEach((b,i)=>{
+      const pulse=(.055+.022*Math.sin(t*.48+i*2)).toFixed(3);
+      const g=ctx.createRadialGradient(b.x,b.y,0,b.x,b.y,b.r);
+      g.addColorStop(0,`rgba(${b.c},${pulse})`);g.addColorStop(1,'transparent');
+      ctx.fillStyle=g;ctx.beginPath();ctx.arc(b.x,b.y,b.r,0,6.283);ctx.fill();
+    });
+
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+}
+
+/* ══════════════════════════════════════
+   CURSOR
+══════════════════════════════════════ */
+if(window.innerWidth>768){
+  const cur=document.getElementById('cur'),cur2=document.getElementById('cur2');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'},{passive:true});
+  (function ar(){rx+=(mx-rx)*.13;ry+=(my-ry)*.13;cur2.style.left=rx+'px';cur2.style.top=ry+'px';requestAnimationFrame(ar)})();
+}
+
+/* ══════════════════════════════════════
+   SCROLL HANDLERS
+══════════════════════════════════════ */
+let ticking=false;
+window.addEventListener('scroll',()=>{
+  if(!ticking){requestAnimationFrame(()=>{
+    const p=scrollY/(document.body.scrollHeight-innerHeight);
+    document.getElementById('progress').style.transform=`scaleX(${p})`;
+    document.getElementById('progress').setAttribute('aria-valuenow',Math.round(p*100));
+    document.getElementById('nav').classList.toggle('sc',scrollY>20);
+    document.getElementById('sticky-cta').classList.toggle('show',scrollY>500);
+    ticking=false;
+  });ticking=true;}
+},{passive:true});
+
+function goto(id){
+  const el=document.getElementById(id);
+  if(el){el.scrollIntoView({behavior:'smooth',block:'start'});el.focus({preventScroll:true})}
+}
+
+/* ══════════════════════════════════════
+   HERO LETTER REVEAL
+══════════════════════════════════════ */
+(function buildHero(){
+  const h=document.getElementById('hero-heading');
+  const parts=[
+    {tag:'span',text:'Build the '},
+    {tag:'em',text:'future.'},
+    {tag:'span',text:'\u00A0'},
+    {tag:'br',text:''},
+    {tag:'span',text:'Ship with '},
+    {tag:'em',text:'purpose.'}
+  ];
+  let delay=.28;
+  parts.forEach(p=>{
+    if(p.tag==='br'){h.appendChild(document.createElement('br'));return}
+    const el=document.createElement(p.tag);
+    if(p.tag==='em'){
+      el.style.cssText='font-family:Instrument Serif,serif;font-style:italic;font-weight:400;letter-spacing:-2px;background:linear-gradient(135deg,var(--v2),var(--c) 60%,var(--g));background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 5s linear infinite';
+    }
+    [...p.text].forEach(ch=>{
+      const s=document.createElement('span');
+      s.className='char';
+      s.style.animationDelay=delay+'s';
+      s.textContent=ch;
+      el.appendChild(s);
+      delay+=.03;
+    });
+    h.appendChild(el);
+  });
+})();
+
+/* ══════════════════════════════════════
+   INTERSECTION OBSERVER — fade in
+══════════════════════════════════════ */
+const obs=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('on');
+      e.target.querySelectorAll('[data-t]').forEach(el=>animCount(el));
+    }
+  });
+},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fi,.tl-item').forEach(el=>obs.observe(el));
+
+/* ══════════════════════════════════════
+   COUNTER — eased
+══════════════════════════════════════ */
+const counted=new WeakSet();
+function animCount(el){
+  if(counted.has(el))return;counted.add(el);
+  const target=+el.dataset.t,suffix=el.dataset.s||'',d=1800,start=performance.now();
+  function ease(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
+  (function u(now){
+    const p=Math.min((now-start)/d,1);
+    el.textContent=Math.round(ease(p)*target)+suffix;
+    if(p<1)requestAnimationFrame(u);
+  })(start);
+}
+
+/* ══════════════════════════════════════
+   MOUSE SPOTLIGHT
+══════════════════════════════════════ */
+document.querySelectorAll('.feat').forEach(c=>{
+  c.addEventListener('mousemove',e=>{
+    const r=c.getBoundingClientRect();
+    c.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+    c.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
+  },{passive:true});
+});
+
+/* ══════════════════════════════════════
+   3D TILT — GPU layer
+══════════════════════════════════════ */
+if(!prefersReduced){
+  document.querySelectorAll('.stat,.testi,.team-card').forEach(c=>{
+    c.addEventListener('mousemove',e=>{
+      const r=c.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      c.style.transform=`perspective(700px) rotateY(${x*9}deg) rotateX(${-y*9}deg) translateY(-7px)`;
+    },{passive:true});
+    c.addEventListener('mouseleave',()=>c.style.transform='');
+  });
+
+  /* Spring buttons */
+  document.querySelectorAll('.btn-glow,.btn-wire,.nav-btn').forEach(b=>{
+    let vx=0,vy=0,tx=0,ty=0,cx=0,cy=0,raf=null;
+    b.addEventListener('mousemove',e=>{
+      const r=b.getBoundingClientRect();
+      cx=(e.clientX-r.left-r.width/2)*.16;cy=(e.clientY-r.top-r.height/2)*.16;
+      if(!raf)spring();
+    },{passive:true});
+    b.addEventListener('mouseleave',()=>{cx=0;cy=0});
+    function spring(){
+      vx+=(cx-tx)*.26;vy+=(cy-ty)*.26;vx*=.72;vy*=.72;
+      tx+=vx;ty+=vy;
+      b.style.transform=`translate(${tx.toFixed(2)}px,${ty.toFixed(2)}px)`;
+      if(Math.abs(vx)>.01||Math.abs(vy)>.01||cx||cy){raf=requestAnimationFrame(spring)}
+      else{raf=null;tx=0;ty=0;b.style.transform=''}
+    }
+  });
+}
+
+/* ══════════════════════════════════════
+   JOB SELECT
+══════════════════════════════════════ */
+let selJ=null;
+function selJob(el,title,stack,meta){
+  document.querySelectorAll('.job').forEach(j=>j.classList.remove('sel'));
+  el.classList.add('sel');
+  selJ={title,stack,meta};
+  document.getElementById('rname').textContent=title;
+  document.getElementById('rmeta').textContent=meta.toUpperCase();
+  announce(`${title} selected. Scroll down to apply.`);
+  setTimeout(()=>document.getElementById('apply').scrollIntoView({behavior:'smooth'}),140);
+}
+
+function handleFile(i){
+  if(i.files[0]){
+    if(i.files[0].size>5242880){toast('File too large. Max 5 MB.','err');i.value='';return}
+    document.getElementById('fn').textContent=i.files[0].name;
+    document.getElementById('fok').style.display='flex';
+    announce('Resume uploaded: '+i.files[0].name);
+  }
+}
+
+/* ══════════════════════════════════════
+   FORM VALIDATION HELPERS
+══════════════════════════════════════ */
+function fieldErr(id,errId,msg,show){
+  const el=document.getElementById(id);
+  const err=document.getElementById(errId);
+  if(show){el.setAttribute('aria-invalid','true');err.textContent=msg;err.classList.add('show')}
+  else{el.removeAttribute('aria-invalid');err.classList.remove('show')}
+  return show;
+}
+function isEmail(e){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)}
+function announce(msg){document.getElementById('live-region').textContent='';setTimeout(()=>document.getElementById('live-region').textContent=msg,100)}
+
+/* ══════════════════════════════════════
+   TOAST
+══════════════════════════════════════ */
+let toastTimer;
+function toast(m,t='ok'){
+  clearTimeout(toastTimer);
+  const el=document.getElementById('toast');el.textContent=m;el.className='show '+t;
+  toastTimer=setTimeout(()=>el.className='',3800);
+}
+
+/* ══════════════════════════════════════
+   CONTACT
+══════════════════════════════════════ */
+async function subContact(){
+  const n=document.getElementById('cn').value.trim();
+  const e=document.getElementById('ce').value.trim();
+  const m=document.getElementById('cm').value.trim();
+  let err=false;
+  err=fieldErr('cn','cn-err','Please enter your name',!n)||err;
+  err=fieldErr('ce','ce-err','Please enter a valid email',!isEmail(e))||err;
+  err=fieldErr('cm','cm-err','Please enter your message',!m)||err;
+  if(err){toast('Please fix the errors above.','err');return}
+  fieldErr('cn','cn-err','',false);fieldErr('ce','ce-err','',false);fieldErr('cm','cm-err','',false);
+  try{
+    await fetch('https://your-backend.com/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:n,email:e,message:m})});
+  }catch{}
+  toast("Message sent! We'll reply within 24 hours.");
+  announce('Message sent successfully');
+  document.getElementById('cn').value='';document.getElementById('ce').value='';document.getElementById('cm').value='';
+}
+
+/* ══════════════════════════════════════
+   APPLY
+══════════════════════════════════════ */
+async function subApply(){
+  if(!selJ){toast('Please select a role first.','err');announce('Please select a job role first');return}
+  const n=document.getElementById('an').value.trim();
+  const e=document.getElementById('ae').value.trim();
+  let err=false;
+  err=fieldErr('an','an-err','Please enter your full name',!n)||err;
+  err=fieldErr('ae','ae-err','Please enter a valid email',!isEmail(e))||err;
+  if(err){toast('Please fix the errors above.','err');return}
+  fieldErr('an','an-err','',false);fieldErr('ae','ae-err','',false);
+  try{
+    const fd=new FormData();fd.append('name',n);fd.append('email',e);fd.append('role',selJ.title);
+    const f=document.getElementById('rf').files[0];if(f)fd.append('resume',f);
+    await fetch('https://your-backend.com/apply',{method:'POST',body:fd});
+  }catch{}
+  toast("Application submitted! We'll review within 5 days.");
+  announce('Application submitted successfully');
+  document.getElementById('an').value='';document.getElementById('ae').value='';
+  document.getElementById('fok').style.display='none';
+  document.getElementById('rname').textContent='a role';
+  document.getElementById('rmeta').textContent='SELECT AN OPEN POSITION ABOVE TO GET STARTED';
+  document.querySelectorAll('.job').forEach(j=>j.classList.remove('sel'));selJ=null;
+}
+
+/* ══════════════════════════════════════
+   EXIT INTENT
+══════════════════════════════════════ */
+let exitShown=false;
+document.addEventListener('mouseleave',e=>{
+  if(e.clientY<8&&!exitShown&&scrollY>350){
+    exitShown=true;
+    document.getElementById('exit-popup').classList.add('show');
+  }
+},{passive:true});
+function closeExit(){
+  document.getElementById('exit-popup').classList.remove('show');
+}
+document.getElementById('exit-popup').addEventListener('click',e=>{
+  if(e.target.id==='exit-popup')closeExit();
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeExit()});
+
+/* ══════════════════════════════════════
+   AI ASSISTANT — Real Claude API
+══════════════════════════════════════ */
+const SYSTEM_PROMPT=`You are Innovent Global Technologies' concise AI assistant. Be warm, sharp, helpful.
+
+FACTS (only use these — never invent):
+- Premium global product studio, founded by Chaitanya
+- 142+ products shipped, 98% client satisfaction, 8 years of building, 22 countries
+- Leadership: Chaitanya (Founder), Dr. Prasanna Kumar (Chief Mentor), Priya (COO), Nikhitha (CTO)
+- Stack: React, Next.js, TypeScript, Node.js, PostgreSQL, Redis, AWS, Kubernetes, Docker, GraphQL, Figma, Terraform, Vercel, Stripe, Prisma, GitHub Actions
+- Process: Discovery → Design Sprint (5 days, high-fidelity prototypes) → Weekly sprints → Zero-downtime launch
+- Benefits: $3k/yr learning, equity from day 1, no meetings Fridays, full health/dental/vision, $1k home office stipend
+- Open roles: Full Stack Engineer (React/Node/PostgreSQL, Remote, Full-time, 3+ yrs), UI/UX Designer (Figma, Hybrid, Full-time, 2+ yrs), DevOps Engineer (AWS/K8s/CI-CD, Remote, Contract, 4+ yrs), AI/ML Engineer (Python/PyTorch/LangChain, Remote, Full-time, 4+ yrs)
+- Contact: They reply within 24 hours
+
+Keep every response under 70 words. Never fabricate.`;
+
+let chatOpen=false,aiHistory=[];
+
+function toggleAI(){
+  chatOpen=!chatOpen;
+  const w=document.getElementById('ai-widget');
+  const btn=document.getElementById('ai-toggle');
+  w.classList.toggle('open',chatOpen);
+  btn.classList.toggle('chat-open',chatOpen);
+  btn.setAttribute('aria-expanded',chatOpen);
+  btn.setAttribute('aria-label',chatOpen?'Close AI assistant':'Open AI assistant');
+  if(chatOpen)document.getElementById('ai-input').focus();
+}
+
+async function askAI(q){
+  document.getElementById('ai-quick').style.display='none';
+  addMsg(q,'user');
+  aiHistory.push({role:'user',content:q});
+  const typing=addTyping();
+  const reply=await callClaude(aiHistory);
+  typing.remove();
+  addMsg(reply,'bot');
+  aiHistory.push({role:'assistant',content:reply});
+  trimHistory();
+}
+
+async function sendAI(){
+  const input=document.getElementById('ai-input');
+  const q=input.value.trim();
+  if(!q)return;
+  input.value='';
+  document.getElementById('ai-quick').style.display='none';
+  addMsg(q,'user');
+  aiHistory.push({role:'user',content:q});
+  const typing=addTyping();
+  const reply=await callClaude(aiHistory);
+  typing.remove();
+  addMsg(reply,'bot');
+  aiHistory.push({role:'assistant',content:reply});
+  trimHistory();
+}
+
+async function callClaude(messages){
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:180,
+        system:SYSTEM_PROMPT,
+        messages
+      })
+    });
+    if(!res.ok)throw new Error('API error');
+    const data=await res.json();
+    return data.content?.[0]?.text||"I couldn't get a response. Please try again!";
+  }catch{
+    return"I'm having trouble connecting right now. Please try again in a moment! 😅";
+  }
+}
+
+function addMsg(text,role){
+  const msgs=document.getElementById('ai-msgs');
+  const d=document.createElement('div');
+  d.className='msg '+role;
+  d.setAttribute('role','article');
+  d.textContent=text;
+  msgs.appendChild(d);
+  msgs.scrollTop=msgs.scrollHeight;
+  return d;
+}
+function addTyping(){
+  const msgs=document.getElementById('ai-msgs');
+  const d=document.createElement('div');
+  d.className='typing';d.setAttribute('aria-label','AI is typing');
+  d.innerHTML='<span></span><span></span><span></span>';
+  msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
+  return d;
+}
+function trimHistory(){if(aiHistory.length>14)aiHistory=aiHistory.slice(-12)}
+</script>
+</body>
+</html>
